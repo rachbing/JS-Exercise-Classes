@@ -203,13 +203,15 @@ class ProjectManager extends Instructor {
     this.gradClassName = pmAtr.gradClassName;
     this.favInstructor = pmAtr.favInstructor;
   }
-  standUp(name, channel) {
-    `${name} announces to ${channel}, @channel standy times!`
+  standUp(channel) {
+    return `${this.name} announces to ${channel}, @channel standy times!`
   }
-  debugsCode(name, subject){
-    `${name} debugs ${this.name}'s code on ${subject}`
+  debugsCode(student, subject){
+    return `${this.name} debugs ${student.name}'s code on ${subject}`
   }
 }
+
+
 /*
   STRETCH PROBLEM (no tests!)
     - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
